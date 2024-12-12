@@ -9,7 +9,7 @@ function onClick() {
 </script>
 
 <template>
-  <v-responsive class="border rounded" max-height="300">
+  <v-responsive class="border rounded">
     <v-app :theme="theme">
       <v-app-bar class="px-3">
         <v-spacer></v-spacer>
@@ -25,11 +25,36 @@ function onClick() {
 
       <v-main>
         <v-container>
-          <h1>Personal Website</h1>
-          <p>Human's were not born to fly</p>
-          <p>But as Human Will grows the impossible becomes reality.</p>
+          <v-row>
+            <v-col cols="12">
+              <h1 class="text-center">SkillHunt</h1>
+              <p class="text-center">Your No.1 Choice for Public Outsourcing!</p>
+              <br />
+              <v-card class="mx-auto, text-center">
+                <template v-slot:title>
+                  <span class="font-weight-black">Please Log In to Continue</span>
+                </template>
+
+                <v-card-text class="bg-surface-light pt-4">
+                  <v-sheet class="mx-auto">
+                    <v-form fast-fail @submit.prevent>
+                      <v-text-field label="First name"></v-text-field>
+
+                      <v-text-field label="Last name"></v-text-field>
+
+                      <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+                    </v-form>
+                  </v-sheet>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-container>
       </v-main>
+      <v-footer border app
+        >"When you have the chance to make a choice, make one that you know you won't
+        regret."</v-footer
+      >
     </v-app>
   </v-responsive>
 </template>
