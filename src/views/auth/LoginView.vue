@@ -20,7 +20,13 @@ import AppLayout from '@/components/layout/AppLayout.vue'
                 <v-text-field label="Email Address" variant="outlined"></v-text-field>
 
                 <v-text-field label="Password" type="password" variant="outlined"></v-text-field>
-                <v-btn class="mt-2" type="submit" block variant="outlined" rounded="lg"
+                <v-btn
+                  class="mt-2"
+                  type="submit"
+                  block
+                  variant="outlined"
+                  rounded="lg"
+                  prepend-icon="mdi-login"
                   >Log In</v-btn
                 >
                 <v-divider class="my-4"></v-divider>

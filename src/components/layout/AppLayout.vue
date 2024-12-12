@@ -16,8 +16,7 @@ function onClick() {
 
         <v-btn
           variant="tonal"
-          :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
-          text="Toggle Theme"
+          :icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
           slim
           @click="onClick"
         ></v-btn>
