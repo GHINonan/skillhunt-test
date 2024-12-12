@@ -30,7 +30,13 @@ import AppLayout from '@/components/layout/AppLayout.vue'
                   type="password"
                   variant="outlined"
                 ></v-text-field>
-                <v-btn class="mt-2" type="submit" block variant="outlined" rounded="lg"
+                <v-btn
+                  class="mt-2"
+                  type="submit"
+                  block
+                  variant="outlined"
+                  rounded="lg"
+                  prepend-icon="mdi-account-plus"
                   >Register</v-btn
                 >
                 <v-divider class="my-4"></v-divider>
