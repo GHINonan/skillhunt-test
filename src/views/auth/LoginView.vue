@@ -15,6 +15,7 @@ function onClick() {
         <v-spacer></v-spacer>
 
         <v-btn
+          variant="tonal"
           :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
           text="Toggle Theme"
           slim
@@ -24,7 +25,9 @@ function onClick() {
 
       <v-main>
         <v-container>
-          <h1>Main Content</h1>
+          <h1>Personal Website</h1>
+          <p>Human's were not born to fly</p>
+          <p>But as Human Will grows the impossible becomes reality.</p>
         </v-container>
       </v-main>
     </v-app>
