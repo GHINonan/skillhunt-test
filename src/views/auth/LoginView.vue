@@ -26,25 +26,26 @@ function onClick() {
       <v-main>
         <v-container>
           <v-row>
-            <v-col cols="12">
+            <v-col cols="12" md="6" class="mx-auto">
               <h1 class="text-center">SkillHunt</h1>
               <p class="text-center">Your No.1 Choice for Public Outsourcing!</p>
               <br />
-              <v-card class="mx-auto, text-center">
+              <v-card class="mx-auto, text-center" prepend-icon="mdi-account">
                 <template v-slot:title>
                   <span class="font-weight-black">Please Log In to Continue</span>
                 </template>
 
                 <v-card-text class="bg-surface-light pt-4">
-                  <v-sheet class="mx-auto">
-                    <v-form fast-fail @submit.prevent>
-                      <v-text-field label="First name"></v-text-field>
+                  <v-form fast-fail @submit.prevent>
+                    <v-text-field label="Email Address" variant="outlined"></v-text-field>
 
-                      <v-text-field label="Last name"></v-text-field>
-
-                      <v-btn class="mt-2" type="submit" block>Submit</v-btn>
-                    </v-form>
-                  </v-sheet>
+                    <v-text-field
+                      label="Password"
+                      type="password"
+                      variant="outlined"
+                    ></v-text-field>
+                    <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+                  </v-form>
                 </v-card-text>
               </v-card>
             </v-col>
