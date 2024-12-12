@@ -44,7 +44,12 @@ function onClick() {
                       type="password"
                       variant="outlined"
                     ></v-text-field>
-                    <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+                    <v-btn class="mt-2" type="submit" block>Log In</v-btn>
+                    <v-divider class="my-4"></v-divider>
+                    <h5>
+                      No account?
+                      <RouterLink to="/register">Click here to Register instead!</RouterLink>
+                    </h5>
                   </v-form>
                 </v-card-text>
               </v-card>
