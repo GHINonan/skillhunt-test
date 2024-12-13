@@ -1,4 +1,5 @@
 <script setup>
+import { requiredValidator, emailValidator } from '@/utils/validators'
 import { ref } from 'vue'
 
 const loading = ref(false)
@@ -8,18 +9,44 @@ function load() {
 }
 
 const visible = ref(false)
+
+const refVForm = ref()
+
+const formDataDefault = {
+  email: '',
+  password: '',
+}
+const formData = ref({ ...formDataDefault })
+
+const onLogin = () => {
+  alert(formData.value)
+}
+
+const onFormSubmit = () => {
+  refVForm.value?.validate().then(({ valid }) => {
+    if (valid) onLogin()
+  })
+}
 </script>
 <template>
-  <v-form fast-fail @submit.prevent>
-    <v-text-field label="Email Address" variant="outlined" prepend-icon="mdi-email"></v-text-field>
+  <v-form ref="refVForm" @submit.prevent="onFormSubmit">
+    <v-text-field
+      v-model="formData.email"
+      label="Email Address"
+      variant="outlined"
+      prepend-icon="mdi-email"
+      :rules="[requiredValidator, emailValidator]"
+    ></v-text-field>
 
     <v-text-field
+      v-model="formData.password"
       prepend-icon="mdi-lock"
       label="Password"
       variant="outlined"
       :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
       :type="visible ? 'text' : 'password'"
       @click:append-inner="visible = !visible"
+      :rules="[requiredValidator]"
     ></v-text-field>
     <v-btn
       :loading="loading"

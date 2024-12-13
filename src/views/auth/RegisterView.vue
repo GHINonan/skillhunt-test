@@ -8,10 +8,9 @@ import RegisterForm from '@/components/auth/RegisterForm.vue'
     <template #content>
       <v-row>
         <v-col cols="12" md="6" class="mx-auto pt-10">
-          <h1 class="text-center">SkillHunt</h1>
-          <v-card class="mx-auto, text-center" prepend-icon="mdi-account" variant="outlined">
+          <v-card class="mx-auto, text-center" variant="outlined" subtitle="Create an Account">
             <template v-slot:title>
-              <span class="font-weight-black">Create an Account</span>
+              <h2 class="font-weight-black">SkillHunt</h2>
             </template>
 
             <v-card-text class="bg-surface-light pt-4">
