@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { useDisplay } from 'vuetify'
 
 const theme = ref(localStorage.getItem('theme') ?? 'light')
 
